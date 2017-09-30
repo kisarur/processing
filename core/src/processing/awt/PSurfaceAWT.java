@@ -48,6 +48,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JFrame;
+import javax.swing.JRootPane;
 
 import processing.core.PApplet;
 import processing.core.PConstants;
@@ -580,6 +581,23 @@ public class PSurfaceAWT extends PSurfaceNone {
 
     if (frame != null) {
       frame.setResizable(resizable);
+    }
+  }
+
+  @Override
+  public void setOpacity(float opacity) {
+    if (frame != null) {
+      if(opacity >= 0 && opacity <= 1) {
+        frame.removeNotify();
+        frame.setUndecorated(true);
+        frame.addNotify();
+
+        ((JFrame) frame).getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
+        frame.setOpacity(opacity);
+      } else {
+        System.out.println("Warning: Opacity should be between 0 and 1.0");
+      }
+
     }
   }
 

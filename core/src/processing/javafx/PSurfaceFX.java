@@ -451,6 +451,11 @@ public class PSurfaceFX implements PSurface {
 //    }
   }
 
+  @Override
+  public void setOpacity(float opacity) {
+    // this method is to be implemented
+  }
+
 
   public void setIcon(PImage icon) {
     int w = icon.pixelWidth;

@@ -98,6 +98,11 @@ public class PSurfaceNone implements PSurface {
     // I don't need size to know my worth.
   }
 
+  @Override
+  public void setOpacity(float opacity) {
+    // No point in setting an opacity here.
+  }
+
 
   @Override
   public void placeWindow(int[] location, int[] editorLocation) { }
@@ -126,6 +131,7 @@ public class PSurfaceNone implements PSurface {
 
   @Override
   public void setSize(int wide, int high) {
+
     if (PApplet.DEBUG) {
       //System.out.format("frame visible %b, setSize(%d, %d) %n", frame.isVisible(), wide, high);
       new Exception(String.format("setSize(%d, %d)", wide, high)).printStackTrace(System.out);

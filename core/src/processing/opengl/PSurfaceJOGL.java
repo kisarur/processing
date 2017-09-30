@@ -454,6 +454,11 @@ public class PSurfaceJOGL implements PSurface {
     });
   }
 
+  @Override
+  public void setOpacity(float opacity) {
+    // this method is to be implemented
+  }
+
 
   public void setIcon(PImage icon) {
     PGraphics.showWarning("Window icons for OpenGL sketches can only be set in settings()\n" +

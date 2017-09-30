@@ -71,6 +71,9 @@ public interface PSurface {
   /** Set true if we want to resize things (default is not resizable) */
   public void setResizable(boolean resizable);
 
+  /** Sets the opacity of the window (Note: Implemented only for PSurfaceAWT.java yet)*/
+  public void setOpacity(float opacity);
+
   /** Dumb name, but inherited from Frame and no better ideas. */
   public void setAlwaysOnTop(boolean always);
 
